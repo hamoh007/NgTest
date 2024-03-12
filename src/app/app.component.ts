@@ -4,6 +4,7 @@ import { MatTabChangeEvent, MatTabsModule } from '@angular/material/tabs';
 import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { ComponentsModule } from './components/components.module';
 import { TABS } from './constants/constants';
+import 'zone.js';
 
 @Component({
   selector: 'app-root',
