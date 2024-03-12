@@ -1,0 +1,15 @@
+<div class="flex items-center justify-around p-10 border rounded">
+  <div class="flex flex-col gap-4">
+    @for(color of colors; track color){
+    <div
+      (click)="selectColor(color)"
+      class="w-10 h-10 rounded cursor-pointer"
+      [style.backgroundColor]="color"
+    ></div>
+    }
+  </div>
+  <div
+    class="w-20 h-20 rounded bg-slate-800"
+    [style.backgroundColor]="selectedColor$ | async"
+  ></div>
+</div>

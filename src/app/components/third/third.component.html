@@ -1,0 +1,6 @@
+<p>third works!</p>
+<mat-select>
+  @for (food of posts$ | asnyc; track food) {
+  <mat-option [value]="food.value">{{ food.viewValue }}</mat-option>
+  }
+</mat-select>
