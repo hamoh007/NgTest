@@ -1,11 +1,9 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router, RouterModule, RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
 import { MatTabChangeEvent, MatTabsModule } from '@angular/material/tabs';
-import { TABS } from './constants/constants';
-import { routes } from './app.routes';
-import { FirstComponent } from './components/first/first.component';
+import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { ComponentsModule } from './components/components.module';
+import { TABS } from './constants/constants';
 
 @Component({
   selector: 'app-root',
