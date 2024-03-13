@@ -11,12 +11,5 @@ export class DataService {
 
   getUsers() {
     // method: get url: 'https://jsonplaceholder.typicode.com/users'
-    return this.httpClient
-      .get<IUser[]>('https://jsonplaceholder.typicode.com/users')
-      .pipe(
-        tap((users) => {
-          this.users$.next(users);
-        })
-      );
   }
 }

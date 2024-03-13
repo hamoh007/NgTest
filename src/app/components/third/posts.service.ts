@@ -17,10 +17,6 @@ export class PostsService {
   }
 
   getAllCommentsByPostId(postId: number) {
-    this.httpClient
-      .get<IComment[]>(
-        `https://jsonplaceholder.typicode.com/posts/${postId}/comments`
-      )
-      .subscribe((posts) => this.comments$.next(posts));
+    // method: get url: https://jsonplaceholder.typicode.com/posts/${postId}/comments response: IComment[]
   }
 }

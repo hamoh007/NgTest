@@ -14,6 +14,6 @@ export class FirstComponent implements OnInit {
   constructor(private readonly dataService: DataService) {}
 
   ngOnInit(): void {
-    this.dataService.getUsers().subscribe();
+    // user DataService to get users
   }
 }
