@@ -1,3 +1,4 @@
+<div>Select Post</div>
 <mat-select
   [formControl]="selectControl"
   class="block w-full px-3 py-2 mt-1 text-sm bg-white border rounded-md shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
@@ -6,7 +7,7 @@
   <mat-option [value]="food.id">{{ food.title }}</mat-option>
   }
 </mat-select>
-
+<div class="mt-4 mb-2">Comments</div>
 <div class="flex flex-col gap-4 my-4">
   @for(comment of comments$ | async; track comment.id){
   <div class="p-2 border rounded">
