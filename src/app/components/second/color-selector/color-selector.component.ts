@@ -14,6 +14,6 @@ export class ColorSelectorComponent {
   selectedColor$ = this.colorService.selectedColor$;
 
   selectColor(color: string) {
-    //
+    this.colorService.setColor(color);
   }
 }

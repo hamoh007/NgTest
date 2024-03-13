@@ -16,7 +16,11 @@ export class PostsService {
       .subscribe((posts) => this.posts$.next(posts));
   }
 
-  getAllCommentsByPostId(postId: number): void {
-    // method: get url: https://jsonplaceholder.typicode.com/posts/${postId}/comments reponse: IComment[]
+  getAllCommentsByPostId(postId: number) {
+    this.httpClient
+      .get<IComment[]>(
+        `https://jsonplaceholder.typicode.com/posts/${postId}/comments`
+      )
+      .subscribe((posts) => this.comments$.next(posts));
   }
 }

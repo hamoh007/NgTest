@@ -10,6 +10,6 @@
   </div>
   <div
     class="w-20 h-20 rounded bg-slate-800"
-    [style.backgroundColor]="selectedColor$"
+    [style.backgroundColor]="selectedColor$ | async"
   ></div>
 </div>
