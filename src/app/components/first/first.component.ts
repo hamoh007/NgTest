@@ -6,14 +6,12 @@ import { DataService } from './data.service';
   templateUrl: './first.component.html',
   styleUrl: './first.component.scss',
 })
-export class FirstComponent implements OnInit {
+export class FirstComponent {
   users$ = this.dataService.users$;
 
   searchText: string = '';
 
-  constructor(private readonly dataService: DataService) {}
-
-  ngOnInit(): void {
-    this.dataService.getUsers().subscribe();
+  constructor(private readonly dataService: DataService) {
+    // Fetch users from DataService
   }
 }

@@ -10,13 +10,6 @@ export class DataService {
   constructor(private readonly httpClient: HttpClient) {}
 
   getUsers() {
-    // method: get url: 'https://jsonplaceholder.typicode.com/users'
-    return this.httpClient
-      .get<IUser[]>('https://jsonplaceholder.typicode.com/users')
-      .pipe(
-        tap((users) => {
-          this.users$.next(users);
-        })
-      );
+    // method: get url: 'https://jsonplaceholder.typicode.com/users' response: IUser[]
   }
 }

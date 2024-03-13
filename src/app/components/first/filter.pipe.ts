@@ -5,7 +5,8 @@ import { IUser } from './data.models';
   name: 'filter',
 })
 export class FilterPipe implements PipeTransform {
-  transform(value: IUser[] | null, searchText: string) {
+  transform(value: IUser[] | null) {
+    const searchText = '';
     return value
       ? value.filter((user) =>
           user.name.toLowerCase().includes(searchText.toLowerCase())

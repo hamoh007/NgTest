@@ -17,7 +17,7 @@
         </tr>
       </thead>
       <tbody>
-        @for(user of (users$ | async) | filter:searchText; track user.id){
+        @for(user of (users$ | async); track user.id){
         <tr>
           <td class="py-2 pl-2 border">{{ user.name }}</td>
           <td class="py-2 pl-2 border">{{ user.email }}</td>

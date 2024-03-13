@@ -16,8 +16,5 @@ export class ThirdComponent implements OnInit {
 
   ngOnInit(): void {
     this.postsService.getAllPosts();
-    this.selectControl.valueChanges.subscribe((value) => {
-      this.postsService.getAllCommentsByPostId(value);
-    });
   }
 }
