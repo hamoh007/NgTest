@@ -6,10 +6,7 @@ import { IUser } from './data.models';
 })
 export class FilterPipe implements PipeTransform {
   transform(value: IUser[] | null, searchText: string) {
-    return value
-      ? value.filter((user: IUser) => {
-          return user.name.toLowerCase().includes(searchText.toLowerCase());
-        })
-      : [];
+    //filter users based on searchText
+    return value;
   }
 }
