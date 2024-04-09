@@ -5,6 +5,11 @@ import { ThirdComponent } from './components/third/third.component';
 
 export const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'first',
+    pathMatch: 'full',
+  },
+  {
     path: 'first',
     component: FirstComponent,
   },
