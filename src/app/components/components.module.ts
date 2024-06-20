@@ -8,6 +8,7 @@ import { FilterPipe } from './first/filter.pipe';
 import { MatSelectModule } from '@angular/material/select';
 
 import { ColorSelectorComponent } from './second/color-selector/color-selector.component';
+import { FourthComponent } from './fourth/fourth.component';
 
 @NgModule({
   imports: [CommonModule, FormsModule, MatSelectModule, ReactiveFormsModule],
@@ -17,6 +18,7 @@ import { ColorSelectorComponent } from './second/color-selector/color-selector.c
     SecondComponent,
     ThirdComponent,
     ColorSelectorComponent,
+    FourthComponent,
   ],
 })
 export class ComponentsModule {}
