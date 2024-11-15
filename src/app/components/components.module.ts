@@ -9,6 +9,7 @@ import { MatSelectModule } from '@angular/material/select';
 
 import { ColorSelectorComponent } from './second/color-selector/color-selector.component';
 import { FourthComponent } from './fourth/fourth.component';
+import { FifthComponent } from './fifth/fifth.component';
 
 @NgModule({
   imports: [CommonModule, FormsModule, MatSelectModule, ReactiveFormsModule],
@@ -19,6 +20,7 @@ import { FourthComponent } from './fourth/fourth.component';
     ThirdComponent,
     ColorSelectorComponent,
     FourthComponent,
+    FifthComponent,
   ],
 })
 export class ComponentsModule {}

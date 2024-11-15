@@ -3,6 +3,7 @@ export enum Tab {
   Second = 'Second',
   Third = 'Third',
   Fourth = 'Fourth',
+  Fifth = 'Fifth',
 }
 
 export const TABS = [
@@ -26,4 +27,9 @@ export const TABS = [
     url: '/fourth',
     label: 'Fourth',
   },
+  {
+    id: Tab.Fifth,
+    url: '/fifth',
+    label: 'Fifth',
+  }
 ];

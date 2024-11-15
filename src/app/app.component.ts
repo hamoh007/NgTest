@@ -1,9 +1,9 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { MatTabChangeEvent, MatTabsModule } from '@angular/material/tabs';
-import { Router, RouterModule, RouterOutlet } from '@angular/router';
-import { ComponentsModule } from './components/components.module';
-import { TABS } from './constants/constants';
+import {CommonModule} from '@angular/common';
+import {Component, OnInit} from '@angular/core';
+import {MatTabChangeEvent, MatTabsModule} from '@angular/material/tabs';
+import {Router, RouterModule, RouterOutlet} from '@angular/router';
+import {ComponentsModule} from './components/components.module';
+import {TABS} from './constants/constants';
 import 'zone.js';
 
 @Component({
@@ -20,11 +20,19 @@ import 'zone.js';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'NgTest';
   tabs = TABS;
 
-  constructor(private router: Router) {}
+  public selectedTabIndex = 0;
+
+  constructor(private router: Router) {
+  }
+
+  ngOnInit() {
+    const location = window.location.href;
+    this.selectedTabIndex = this.tabs.findIndex(tab => location.includes(tab.url));
+  }
 
   tabChange(data: MatTabChangeEvent) {
     this.router.navigate([this.tabs[data.index].url]);
